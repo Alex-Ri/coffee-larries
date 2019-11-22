@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "live": "nodemon -r esm ./server/index",
-    "start": "node -r esm ./server/index",
+    "live": "nodemon -r esm ./server/index.js",
+    "start": "node -r esm ./server/index.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
-    "nodemon": "^2.0.0"
+    "nodemon": "^2.0.0",
+    "serve-static": "^1.14.1"
   }
 }
