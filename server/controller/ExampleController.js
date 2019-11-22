@@ -11,6 +11,11 @@ class ExampleController {
 			example: example.getJSON()
 		})
 	}
+
+	examplePostRequest(req, res) {
+		console.log(req.body)
+		res.status(201).send(`Retrieved ${ req.body } successfully!`)
+	}
 }
 
 export default new ExampleController()
