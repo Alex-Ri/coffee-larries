@@ -8,6 +8,18 @@
 	</div>
 </template>
 
+<script>
+import ExampleService from './api/ExampleService'
+
+export default {
+	mounted() {
+		ExampleService.getExampleMessage()
+		ExampleService.postExampleMessage()
+	}
+}
+
+</script>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,10 +1,14 @@
 const express = require('express')
 const cors = require('cors')
+const serveStatic = require('serve-static')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
- 
+const path = require('path')
+
 const app = express()
- 
+
+app.use('/', serveStatic(path.join(__dirname, '../client/dist')));
+
 app.use(morgan('tiny'))
 app.use(cors())
 app.use(bodyParser.json())
