@@ -7,7 +7,7 @@ const path = require('path')
  
 const app = express()
 
-app.use('/', serveStatic(path.join(__dirname, 'client/build')));
+app.use('/', serveStatic(path.join(__dirname, 'client/dist')));
 
 app.use(morgan('tiny'))
 app.use(cors())
