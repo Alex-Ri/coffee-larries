@@ -1,11 +1,8 @@
-<template id="credits">
+<template id="account">
     <v-ons-page>
         <section>
             <p style="text-align: center">
-                Hey there!
-            </p>
-            <p style="text-align: center">
-                Kudos to Buhlero!
+                This is you
             </p>
         </section>
     </v-ons-page>
@@ -13,7 +10,7 @@
 
 <script>
 export default {
-	name: 'SpecialThanks'
+	name: 'Account'
 }
 
 </script>

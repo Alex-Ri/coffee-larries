@@ -1,8 +1,8 @@
-<template id="coffeelist">
+<template id="prestige">
     <v-ons-page>
         <section>
             <p style="text-align: center">
-               coooooooffeeeeeeee
+                You got any more of this prestige?
             </p>
         </section>
     </v-ons-page>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-	name: 'CoffeeList'
+	name: 'Prestige'
 }
 
 </script>

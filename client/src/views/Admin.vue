@@ -1,8 +1,8 @@
-<template id="coffeelist">
+<template id="admin">
     <v-ons-page>
         <section>
             <p style="text-align: center">
-               coooooooffeeeeeeee
+                Hey there Admin!
             </p>
         </section>
     </v-ons-page>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-	name: 'CoffeeList'
+	name: 'Admin'
 }
 
 </script>

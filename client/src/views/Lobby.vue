@@ -1,8 +1,8 @@
-<template id="coffeelist">
+<template id="lobby">
     <v-ons-page>
         <section>
             <p style="text-align: center">
-               coooooooffeeeeeeee
+                Welcome to the real lobby
             </p>
         </section>
     </v-ons-page>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-	name: 'CoffeeList'
+	name: 'Lobby'
 }
 
 </script>

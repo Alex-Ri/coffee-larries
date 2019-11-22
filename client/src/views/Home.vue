@@ -1,13 +1,16 @@
 <template id="main-page">
-  <v-ons-page>
-    <v-ons-toolbar>
-      <div class="center">Title</div>
-    </v-ons-toolbar>
+	<v-ons-page>
+		<v-ons-toolbar>
+			<div class="center">Coffees</div>
+		</v-ons-toolbar>
 
 		<v-ons-tabbar>
 			<template slot="pages">
 				<CoffeeList></CoffeeList>
-				<SpecialThanks></SpecialThanks>
+				<Lobby></Lobby>
+				<Prestige></Prestige>
+				<Account></Account>
+				<Admin></Admin>
 			</template>
 			<v-ons-tab v-for="tab in tabs"
 				:key="tab.key"
@@ -17,35 +20,59 @@
 				:page="tab"
 			></v-ons-tab>
 		</v-ons-tabbar>
-  </v-ons-page>
+	</v-ons-page>
 </template>
 
 <script>
-// @ is an alias to /src
-import SpecialThanks from './SpecialThanks.vue'
+
 import CoffeeList from './CoffeeList.vue'
+import Lobby from './Lobby.vue'
+import Prestige from './Prestige.vue'
+import Account from './Account.vue'
+import Admin from './Admin.vue'
 
 export default {
 	name: 'home',
 	components: {
-		SpecialThanks,
-		CoffeeList
+		CoffeeList,
+		Lobby,
+		Prestige,
+		Account,
+		Admin
 	},
 	data() {
 		return {
 			activeIndex: 0,
 			tabs: [
 				{
-					icon: this.md() ? null : 'icon-home',
+					icon: 'icon-home',
 					label: 'Coffee',
 					key: 'coffeelist',
 					page: {template: '#coffeelist'},
 				},
 				{
-					icon: this.md() ? null : 'icon-home',
-					label: 'Credits',
-					key: "credits",
-					page: {template: '#credits'},
+					icon: 'icon-home',
+					label: 'Lobby',
+					key: "lobby",
+					page: {template: '#lobby'},
+				},
+				{
+					icon: 'icon-home',
+					label: 'Prestige',
+					key: "prestige",
+					page: {template: '#prestige'},
+				},
+				{
+					icon: 'icon-home',
+					label: 'Account',
+					key: "account",
+					page: {template: '#account'},
+				},
+				{
+					icon: 'icon-home',
+					label: 'Admin',
+					key: "admin",
+					page: {template: '#admin'},
 				}
 			]
 		}
