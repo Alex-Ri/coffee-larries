@@ -1,0 +1,10 @@
+{
+  "short_name": "Coffee Larries",
+  "name": "Coffee Larries",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF"
+}
