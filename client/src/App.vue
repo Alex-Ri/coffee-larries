@@ -9,12 +9,13 @@
 </template>
 
 <script>
-import ExampleService from './api/ExampleService'
+//import ExampleService from './api/ExampleService'
 
 export default {
 	mounted() {
-		ExampleService.getExampleMessage()
-		ExampleService.postExampleMessage()
+		console.log(process.env)
+		//ExampleService.getExampleMessage()
+		//ExampleService.postExampleMessage()
 	}
 }
 
