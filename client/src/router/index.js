@@ -6,7 +6,6 @@ import Lobby from '../views/Lobby.vue'
 import Prestige from '../views/Prestige.vue'
 import UserAccount from '../views/UserAccount.vue'
 import Admin from '../views/Admin.vue'
-// import * as TransitionName from '@/utilities/enums/TransitionName'
 
 Vue.use(VueRouter)
 
@@ -57,15 +56,5 @@ const router = new VueRouter({
 	base: process.env.BASE_URL,
 	routes
 })
-
-// router.beforeEach((to, from, next) => {
-// 	// `to` and `from` are both route objects
-// 	if(to.meta && to.meta.hasChildTransition) {
-// 		this.transitionName = TransitionName.SOFT_SLIDE_LEFT
-// 	} else if (!this.navigatingBack) {
-// 		this.transitionName = TransitionName.NONE
-// 	}
-// 	next()
-// })
 
 export default router
