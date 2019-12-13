@@ -1,16 +1,19 @@
 <template id="lobby">
-    <v-ons-page>
-        <section>
-            <p style="text-align: center">
-                Welcome to the real lobby
-            </p>
-        </section>
-    </v-ons-page>
+    <section>
+        <p style="text-align: center">
+            Welcome to the real lobby
+        </p>
+       <MainNavigation></MainNavigation>
+    </section>
 </template>
 
 <script>
-export default {
-	name: 'Lobby'
-}
+import MainNavigation from '@/components/MainNavigation.vue'
 
+export default {
+	name: 'Lobby',
+	components: {
+		MainNavigation
+	}
+}
 </script>

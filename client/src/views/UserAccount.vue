@@ -1,6 +1,8 @@
-<template id="admin">
+<template id="useraccount">
     <section>
-        <p>Oi! Admin!</p>
+        <p style="text-align: center">
+            Hey there sweety
+        </p>
         <MainNavigation></MainNavigation>
     </section>
 </template>
@@ -9,7 +11,7 @@
 import MainNavigation from '@/components/MainNavigation.vue'
 
 export default {
-	name: 'Admin',
+	name: 'UserAccount',
 	components: {
 		MainNavigation
 	}

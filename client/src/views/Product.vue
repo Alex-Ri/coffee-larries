@@ -1,18 +1,21 @@
-<template id="prestige">
+<template id="product">
     <section>
+        <action-bar :showBackButton="true">Produkte</action-bar>
         <p style="text-align: center">
-            Get all the beans
+            this is one good coffee
         </p>
         <MainNavigation></MainNavigation>
     </section>
 </template>
 
 <script>
+import ActionBar from '@/components/ActionBar.vue'
 import MainNavigation from '@/components/MainNavigation.vue'
 
 export default {
-	name: 'Prestige',
+	name: 'Product',
 	components: {
+		ActionBar,
 		MainNavigation
 	}
 }

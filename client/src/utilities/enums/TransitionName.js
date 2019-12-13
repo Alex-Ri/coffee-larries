@@ -1,0 +1,5 @@
+export const SLIDE_LEFT = 'slide-left'
+export const SLIDE_RIGHT = 'slide-right'
+export const SOFT_SLIDE_LEFT = 'soft-slide-left'
+export const SOFT_SLIDE_RIGHT = 'soft-slide-right'
+export const NONE = 'none'
