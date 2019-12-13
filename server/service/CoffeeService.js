@@ -82,9 +82,8 @@ class CoffeeService {
 	_validate(vote, schema) {
 		const result = schema.validate(vote)
 
-		if(result.error) {
+		if(result.error)
 			throw new JoiValidationException(result.error.details[0])
-		}
 	
 		return result.value
 	}
@@ -132,7 +131,7 @@ class CoffeeService {
 				foundExclusions.push(exclusion)
 		}
 
-		if(foundExclusions.length >=1) 
+		if(foundExclusions.length >= 1) 
 			throw new BadRequestException(`You are not allowed to update ${ foundExclusions.join(', ') }.`)
 	}
 }

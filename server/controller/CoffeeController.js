@@ -20,7 +20,7 @@ class CoffeeController {
 	async postVoteForCoffee(req, res) {
 		const { id } = req.params
 		const { body } = req
-		return this._respond(res, {status: 201, body: await CoffeeService.addVoteForCoffee(id, body) })
+		return this._respond(res, { status: 201, body: await CoffeeService.addVoteForCoffee(id, body) })
 	}
 
 	async patchVoteForCoffee(req, res) {
