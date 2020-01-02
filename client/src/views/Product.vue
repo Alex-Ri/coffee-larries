@@ -1,9 +1,10 @@
 <template id="product">
     <section>
-        <action-bar :showBackButton="true">Produkte</action-bar>
-        <p style="text-align: center">
-            this is one good coffee
-        </p>
+        <action-bar :showBackButton="true">Back to all</action-bar>
+        <h1>Kenia</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
         <MainNavigation></MainNavigation>
     </section>
 </template>

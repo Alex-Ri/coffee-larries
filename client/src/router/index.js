@@ -2,10 +2,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import ProductList from '../views/ProductList.vue'
 import Product from '../views/Product.vue'
+import BuildCoffee from '../views/BuildCoffee.vue'
 import Lobby from '../views/Lobby.vue'
 import Prestige from '../views/Prestige.vue'
 import UserAccount from '../views/UserAccount.vue'
 import Admin from '../views/Admin.vue'
+import UserList from '../views/UserList.vue'
+import Confirmation from '../views/Confirmation.vue'
+import AddMe from '../views/AddMe.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +20,7 @@ const routes = [
 		component: Lobby
 	},
 	{
-		path: '/product',
+		path: '/product:id',
 		name: 'Product',
 		component: Product,
 		meta: {
@@ -29,6 +33,11 @@ const routes = [
 		component: ProductList
 	},
 	{
+		path: '/buildcoffee',
+		name: 'BuildCoffee',
+		component: BuildCoffee
+	},
+	{
 		path: '/prestige',
 		name: 'Prestige',
 		component: Prestige
@@ -37,6 +46,21 @@ const routes = [
 		path: '/account',
 		name: 'UserAccount',
 		component: UserAccount
+	},
+	{
+		path: '/userlist',
+		name: 'UserList',
+		component: UserList
+	},
+	{
+		path: '/confirmation',
+		name: 'Confirmation',
+		component: Confirmation
+	},
+	{
+		path: '/addme',
+		name: 'AddMe',
+		component: AddMe
 	},
 	{
 		path: '/admin',

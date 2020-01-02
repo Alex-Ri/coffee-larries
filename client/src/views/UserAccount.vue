@@ -1,8 +1,10 @@
 <template id="useraccount">
     <section>
-        <p style="text-align: center">
-            Hey there sweety
-        </p>
+        <h1>Hi Anja!</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
         <MainNavigation></MainNavigation>
     </section>
 </template>

@@ -2,7 +2,6 @@
   <div class="action-bar">
     <back-button v-if="showBackButton" class="action-bar__go-back" />
     <slot />
-    <span>Done</span>
   </div>
 </template>
 
