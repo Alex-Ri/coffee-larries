@@ -1,7 +1,7 @@
 import JoiValidationException from '../exceptions/JoiValidationException'
 import BadRequestException from '../exceptions/BadRequestException'
-import CoffeeSchema from '../db/validations/CoffeeSchema'
-import VoteSchema from '../db/validations/VoteSchema'
+import CoffeeSchema from '../db/validations/coffee/CoffeeSchema'
+import VoteSchema from '../db/validations/coffee/VoteSchema'
 
 const Coffee = require('../entity/Coffee')
 
