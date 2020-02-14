@@ -2,7 +2,7 @@
     <section>
         <h1>Hey Admin!</h1>
         <button style="padding:5px;margin:5px;border:1px solid #ccc;">Add new user</button>
-        <button style="padding:5px;margin:5px;border:1px solid #ccc;">Add new coffee</button>
+        <router-link to="/admin/addcoffee" style="padding:5px;margin:5px;border:1px solid #ccc;">Add new user</router-link>
         <button style="padding:5px;margin:5px;border:1px solid #ccc;">Delete User</button>
         <button style="padding:5px;margin:5px;border:1px solid #ccc;">Delete Coffee</button>
         <hr>
