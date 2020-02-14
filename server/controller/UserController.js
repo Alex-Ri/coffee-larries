@@ -1,33 +1,69 @@
-import User from '../entity/User'
+import UserService from '../service/UserService'
 
 class UserController {
 	constructor() {}
 
-	getAllUsers(req, res) {
-		res.status(200).json({
-			users: this.users
-		})
+	async getAllUsers(_, res) {
+		return this._respond(res, { status: 200,  body: await UserService.queryAllUsers() })
 	}
 
-	getUserById(req, res) {
+	async getUserById(req, res) {
 		const { id } = req.params
-
-		// GET USER BY ID
+		return this._respond(res, { status: 200, body: await UserService.queryUserById(id) })
 	}
 
-	postUser(req, res) {
+	async postUser(req, res) {
 		const { body } = req
-		// CREATE USER
-
-		res.status(201).send('Successfully craeted new user.')
+		return this._respond(res, { status: 201, body: await UserService.createNewUser(body) })
 	}
 
-	deleteUser(req, res) {
+	async patchUser(req, res) {
 		const { id } = req.params
-		// DELETE USER
-		res.status(200).send('Successfully deleted user.')
+		const { body } = req
+		return this._respond(res, { status: 200, body: await UserService.updateExistingUser(id, body) })
 	}
 
+	async postPaidEntryForUser(req, res) {
+		const { id } = req.params
+		const { body } = req
+		return this._respond(res, { status: 201, body: await UserService.addPaidEntryToUser(id, body) })
+	}
+
+	async postConsumedCoffeeForUser(req, res) {
+		const { id } = req.params
+		const { body } = req
+		return this._respond(res, { status: 201, body: await UserService.addConsumedCoffeeToUser(id, body) })
+	}
+
+	async deleteUser(req, res) {
+		const { id } = req.params
+		return this._respond(res, { status: 200, body: await UserService.deleteUser(id) })
+	}
+
+	_respond(res, response) {
+		const { status, body } = response
+		res.status(status).json(body)
+	}
 }
 
 export default new UserController()
+
+
+
+	// async postVoteForCoffee(req, res) {
+	// 	const { id } = req.params
+	// 	const { body } = req
+	// 	return this._respond(res, { status: 201, body: await CoffeeService.addVoteForCoffee(id, body) })
+	// }
+
+	// async patchVoteForCoffee(req, res) {
+	// 	const { id } = req.params
+	// 	const { body } = req
+	// 	return this._respond(res, { status: 200, body: await CoffeeService.updateVoteForCoffee(id, body) })
+	// }
+
+	// async patchCoffee(req, res) {
+	// 	const { id } = req.params
+	// 	const { body } = req
+	// 	return this._respond(res, { status: 200, body: await CoffeeService.updateExistingCoffee(id, body) })
+	// } 
