@@ -1,7 +1,7 @@
 <template id="product">
     <section>
         <action-bar :showBackButton="true">Back to all</action-bar>
-        <h1>Kenia</h1>
+        <h1>{{ $route.params.id }}</h1>
         <p>Lorem ipsum dolor sit amet</p>
         <p>Lorem ipsum dolor sit amet</p>
         <p>Lorem ipsum dolor sit amet</p>
@@ -18,6 +18,10 @@ export default {
 	components: {
 		ActionBar,
 		MainNavigation
+	},
+	mounted() {
+		console.log('this.$route.params.id')
+		console.log(this.$route.params.id)
 	}
 }
 </script>

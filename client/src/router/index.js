@@ -20,7 +20,7 @@ const routes = [
 		component: Lobby
 	},
 	{
-		path: '/product:id',
+		path: '/product/:id',
 		name: 'Product',
 		component: Product,
 		meta: {
