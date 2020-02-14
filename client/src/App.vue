@@ -6,7 +6,7 @@
 
 <script>
 import NavigationTransition from './components/NavigationTransition.vue'
-import ExampleService from './api/ExampleService'
+// import ExampleService from './api/ExampleService'
 
 export default {
 	components: {
