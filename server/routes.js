@@ -18,9 +18,13 @@ router.patchAsync('/coffee/:id/vote', async (...args) => CoffeeController.patchV
 router.patchAsync('/coffee/:id', async (...args) => CoffeeController.patchCoffee(...args))
 router.deleteAsync('/coffee/:id', async (...args) => CoffeeController.deleteCoffee(...args))
 
-router.route('/user').get((...args) => UserController.getAllUsers(...args))
-router.route('/user/:id').get((...args) => UserController.getUserById(...args))
-router.route('/user').post((...args) => UserController.postUser(...args))
-router.route('/user/:id').delete((...args) => UserController.deleteUser(...args))
+// User routes
+router.getAsync('/user', async (...args) => UserController.getAllUsers(...args) )
+router.getAsync('/user/:id', async (...args) => UserController.getUserById(...args) )
+router.postAsync('/user', async (...args) => UserController.postUser(...args) )
+router.patchAsync('/user/:id', async (...args) => UserController.patchUser(...args))
+router.postAsync('/user/:id/pay', async (...args) => UserController.postPaidEntryForUser(...args))
+router.postAsync('/user/:id/coffee', async (...args) => UserController.postConsumedCoffeeForUser(...args))
+router.deleteAsync('/user/:id', async (...args) => UserController.deleteUser(...args) )
 
 module.exports = router
