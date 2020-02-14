@@ -1,9 +1,9 @@
 <template>
-  <a class="back-button" v-on="listeners" aria-label="Navigate to previous screen">
-    <svg width="14" height="23" viewBox="0 0 14 23" fill="none">
-      <path d="M13 1L2 11.5L13 22" stroke="black" stroke-width="2"/>
-    </svg>
-  </a>
+	<a class="back-button" v-on="listeners" aria-label="Navigate to previous screen">
+		<svg width="14" height="23" viewBox="0 0 14 23" fill="none">
+			<path d="M13 1L2 11.5L13 22" stroke="black" stroke-width="2" />
+		</svg>
+	</a>
 </template>
 
 <script>

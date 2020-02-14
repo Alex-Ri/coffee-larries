@@ -1,12 +1,12 @@
 <template id="product">
-    <section>
-        <action-bar :showBackButton="true">Back to all</action-bar>
-        <h1>{{ $route.params.id }}</h1>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <MainNavigation></MainNavigation>
-    </section>
+	<section>
+		<action-bar :show-back-button="true">Back to all</action-bar>
+		<h1>{{ $route.params.id }}</h1>
+		<p>Lorem ipsum dolor sit amet</p>
+		<p>Lorem ipsum dolor sit amet</p>
+		<p>Lorem ipsum dolor sit amet</p>
+		<MainNavigation></MainNavigation>
+	</section>
 </template>
 
 <script>

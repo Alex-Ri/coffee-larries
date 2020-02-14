@@ -1,6 +1,6 @@
 <template>
 	<navigation-transition>
-    <router-view class="app"></router-view>
+		<router-view class="app"></router-view>
 	</navigation-transition>
 </template>
 
@@ -14,8 +14,8 @@ export default {
 	},
 	mounted() {
 		console.log(process.env)
-		//ExampleService.getExampleMessage()
-		//ExampleService.postExampleMessage()
+		// ExampleService.getExampleMessage()
+		// ExampleService.postExampleMessage()
 	}
 }
 

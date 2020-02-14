@@ -1,8 +1,8 @@
 <template>
-  <div class="action-bar">
-    <back-button v-if="showBackButton" class="action-bar__go-back" />
-    <slot />
-  </div>
+	<div class="action-bar">
+		<back-button v-if="showBackButton" class="action-bar__go-back" />
+		<slot />
+	</div>
 </template>
 
 <script>

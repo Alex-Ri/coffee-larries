@@ -1,7 +1,8 @@
+/* eslint-disable */
 import axios from 'axios'
 
 export default class APIService {
-	static _serviceURL 
+	static _serviceURL
 
 	constructor(serviceURL) {
 		this._serviceURL = serviceURL
@@ -9,7 +10,7 @@ export default class APIService {
 
 	performRequest(requestPayload) {
 		const { url, httpMethod, requestBody = {} } = requestPayload
-		return axios[httpMethod](url, requestBody).then( response => {
+		return axios[httpMethod](url, requestBody).then(response => {
 			console.log(response.data)
 			return response.data
 		}, err => {

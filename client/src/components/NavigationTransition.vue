@@ -1,7 +1,7 @@
 <template>
-  <transition :name="transitionName" :css="true">
-    <slot />
-  </transition>
+	<transition :name="transitionName" :css="true">
+		<slot />
+	</transition>
 </template>
 
 <script>
@@ -16,9 +16,9 @@ export default {
 	},
 	watch: {
 		'$route' (to, from) {
-			if(to && to.meta && to.meta.isChildPage == true) {
+			if (to && to.meta && to.meta.isChildPage) {
 				this.transitionName = TransitionName.SLIDE_LEFT
-			} else if(from && from.meta && from.meta.isChildPage == true) {
+			} else if (from && from.meta && from.meta.isChildPage) {
 				this.transitionName = TransitionName.SLIDE_RIGHT
 			} else {
 				this.transitionName = TransitionName.NONE

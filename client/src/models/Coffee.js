@@ -10,4 +10,3 @@ export default class Coffee {
 		this.rating = jsonCoffee.rating
 	}
 }
-  

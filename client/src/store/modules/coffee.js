@@ -1,12 +1,13 @@
 import Coffee from '../../models/Coffee'
+import CoffeeService from '../../api/CoffeeService'
 
 const state = {
-	coffee: [],
+	coffee: []
 }
 
 const getters = {
 	getCoffees: () => state.coffee,
-	getCoffeeById: () => id => state.coffee.filter(coffeeEntry => coffeeEntry.id === Number(id))[0],
+	getCoffeeById: () => id => state.coffee.filter(coffeeEntry => coffeeEntry.id === Number(id))[0]
 }
 
 const mutations = {
@@ -20,9 +21,17 @@ const mutations = {
 }
 
 const actions = {
-	queryAllCoffee: (/*context*/) => {
-    
+	queryAllCoffee: (/* context*/) => {
+
 	},
+	// eslint-disable-next-line no-unused-vars
+	createNewCoffee(context, payload) {
+		// eslint-disable-next-line no-unused-vars
+		const prepareCoffeeDataRequest = {
+		}
+
+		CoffeeService.getCoffee()
+	}
 }
 
 export default {
@@ -30,5 +39,5 @@ export default {
 	getters,
 	mutations,
 	actions,
-	state,
+	state
 }

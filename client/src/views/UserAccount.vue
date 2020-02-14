@@ -1,12 +1,12 @@
 <template id="useraccount">
-    <section>
-        <h1>Hi Anja!</h1>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <MainNavigation></MainNavigation>
-    </section>
+	<section>
+		<h1>Hi Anja!</h1>
+		<p>Lorem ipsum dolor sit amet</p>
+		<p>Lorem ipsum dolor sit amet</p>
+		<p>Lorem ipsum dolor sit amet</p>
+		<p>Lorem ipsum dolor sit amet</p>
+		<MainNavigation></MainNavigation>
+	</section>
 </template>
 
 <script>
