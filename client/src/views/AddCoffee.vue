@@ -8,20 +8,18 @@
             <input type="text" name="price" placeholder="Price" v-model="coffee.price" />
             <input type="text" name="description" placeholder="Description" v-model="coffee.description" />
             <input type="file" name="imagefile" placeholder="Image" accept="image/*" />
+        
+            <div style="display:flex;flex-direction:row;justify-content:space-between;margin-bottom:10px;">
+                <router-link to="/admin" class="main-nav__link main-nav__home-link" style="background:blue;width:45%;padding:5px;">Cancel</router-link>
+                <button type="submit" class="main-nav__link main-nav__home-link" style="background:green;width:45%;padding:5px;">Submit</button>
+            </div>
         </form>
-
-        <MainNavigation></MainNavigation>
     </section>
 </template>
 
 <script>
-import MainNavigation from '@/components/MainNavigation.vue'
-
 export default {
 	name: 'Admin',
-	components: {
-		MainNavigation
-	},
 	data() {
 		return {
 			coffee: {
@@ -34,7 +32,7 @@ export default {
 	},
 	methods: {
 		sendForm() {
-
+			console.log('submit')
 		}
 	}
 }
