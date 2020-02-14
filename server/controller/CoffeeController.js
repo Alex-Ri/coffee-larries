@@ -1,33 +1,49 @@
-import Coffee from '../model/Coffee'
+import CoffeeService from '../service/CoffeeService'
 
 class CoffeeController {
 	constructor() {}
 
-	getAllCoffee(req, res) {
-		res.status(200).json({
-			coffee: this.coffee
-		})
+	async getAllCoffee(_, res) {
+		return this._respond(res, { status: 200,  body: await CoffeeService.queryAllCoffee() })
 	}
 
-	getCoffeeById(req, res) {
+	async getCoffeeById(req, res) {
 		const { id } = req.params
-
-		// GET BY ID
+		return this._respond(res, { status: 200, body: await CoffeeService.queryCoffeeById(id) })
 	}
 
-	postCoffee(req, res) {
+	async postCoffee(req, res) {
 		const { body } = req
-		// CREATE COFFEE
-
-		res.status(201).send('Successfully craeted new coffee.')
+		return this._respond(res, { status: 201, body: await CoffeeService.createNewCoffee(body) })
 	}
 
-	deleteCoffee(req, res) {
+	async postVoteForCoffee(req, res) {
 		const { id } = req.params
-		// DELETE COFFEE
-		res.status(200).send('Successfully deleted coffee.')
+		const { body } = req
+		return this._respond(res, { status: 201, body: await CoffeeService.addVoteForCoffee(id, body) })
 	}
 
+	async patchVoteForCoffee(req, res) {
+		const { id } = req.params
+		const { body } = req
+		return this._respond(res, { status: 200, body: await CoffeeService.updateVoteForCoffee(id, body) })
+	}
+
+	async patchCoffee(req, res) {
+		const { id } = req.params
+		const { body } = req
+		return this._respond(res, { status: 200, body: await CoffeeService.updateExistingCoffee(id, body) })
+	}
+
+	async deleteCoffee(req, res) {
+		const { id } = req.params
+		return this._respond(res, { status: 200, body: await CoffeeService.deleteCoffee(id) })
+	}
+
+	_respond(res, response) {
+		const { status, body } = response
+		res.status(status).json(body)
+	}
 }
 
 export default new CoffeeController()

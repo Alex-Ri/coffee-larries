@@ -1,4 +1,4 @@
-import Example from '../model/Example'
+import Example from '../entity/Example'
 
 class ExampleController {
 	constructor() {}
