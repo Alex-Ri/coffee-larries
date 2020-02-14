@@ -10,7 +10,8 @@ const RatingSchema = Joi.object().options({ stripUnknown: true }).keys({
 	votes: Joi.array()
 		.items(VoteSchema)
 		.unique( (a, b) => a.userId === b.userId )
-		.allow('', null)
+		.allow('', null),
+	created: Joi.date().default(new Date())
 })
 
 export default RatingSchema

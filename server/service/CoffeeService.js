@@ -21,12 +21,12 @@ class CoffeeService {
 		this._removeAttributesFromRequestBodyForCreation(coffeeRequestBody)
 		// validate coffee with joi and create when successful 
 		const validatedCoffee = this._validate(coffeeRequestBody, CoffeeSchema)
+		
 		return await Coffee.create(validatedCoffee)
 	}
 
 	async addVoteForCoffee(id, voteRequestBody) {
 		const validatedVote = this._validate(voteRequestBody, VoteSchema)
-		validatedVote.created = new Date()
 
 		const coffee = await Coffee.getById(id)
 
@@ -116,7 +116,7 @@ class CoffeeService {
 		allAvailableAttributes.forEach( attribute => {
 			const attributeKey = attribute.key
 			const { [attributeKey]: attributeValue }  = reqBody
-			if(attributeValue)
+			if(attributeValue !== undefined)
 				updateObject[attributeKey] = attributeValue
 		})
 
@@ -124,7 +124,7 @@ class CoffeeService {
 	}	
 
 	_checkForExclusionsInUpdate(updateObject) {
-		const exclusions = [ 'rating' ]
+		const exclusions = [ 'rating', 'created' ]
 		let foundExclusions = []
 		for(const exclusion of exclusions) {
 			if(exclusion in updateObject) 

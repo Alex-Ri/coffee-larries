@@ -31,7 +31,8 @@ const CoffeeSchema = Joi.object().options({ stripUnknown: true }).keys({
 		.required(),
 	imageURL: Joi.string()
 		.required(),
-	rating: RatingSchema.default({ value: 3.0, votes: [ { userId: 'default', value: 3.0 } ]})
+	rating: RatingSchema.default({ value: 3.0, votes: [ { userId: 'default', value: 3.0 } ]}),
+	created: Joi.date().default(new Date())
 })
 
 export default CoffeeSchema
