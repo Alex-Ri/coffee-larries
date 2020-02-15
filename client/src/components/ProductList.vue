@@ -7,7 +7,7 @@
 				:to="'/product/' + coffee.id"
 				class="main-nav__link main-nav__home-link"
 			>
-				<div tyle="display:flex;flex-direction:row;justify-content:space-between;margin-bottom:10px;">
+				<div style="display:flex;flex-direction:row;justify-content:space-between;margin-bottom:10px;">
 					<div style="height:100px;width:100px;background:purple;margin-right:10px"></div>
 					<p>{{ coffee.name }}</p>
 					<p>{{ coffee.price }}</p>

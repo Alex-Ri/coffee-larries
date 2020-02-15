@@ -58,9 +58,15 @@ export default {
 }
 
 .page__bottom {
+	/*
   position: relative;
   z-index: 10;
   flex-shrink: 0;
+	*/
+
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 .main-nav {

@@ -21,7 +21,7 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
 #nav {
   padding: 30px;
 }
@@ -94,4 +94,11 @@ body, html {
   margin-left: auto;
   margin-right: auto;
 }
+
+// imports
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+@import 'assets/scss/style';
+
 </style>
