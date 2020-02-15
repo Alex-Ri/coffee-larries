@@ -1,37 +1,37 @@
 <template id="userlist">
-    <section>
-        <ul v-if="parent === 'buildCoffee'" style="list-style-type:none;">
-            <li v-for="(user, key) in users" :key="key" style="padding:10px;margin-bottom:10px;">
-                <input type="checkbox" name="user" :value="user.id" /><label>{{ user.firstname + ' ' + user.name }}</label>
-            </li>
-        </ul>
+	<section>
+		<ul v-if="parent === 'buildCoffee'" style="list-style-type:none;">
+			<li v-for="(user, key) in users" :key="key" style="padding:10px;margin-bottom:10px;">
+				<input type="checkbox" name="user" :value="user.id" /><label>{{ user.firstname + ' ' + user.name }}</label>
+			</li>
+		</ul>
 
-        <table v-if="parent === 'admin'">
-            <tr>
-                <th style="width:25%">Name</th>
-                <th style="width:25%">Gram</th>
-                <th style="width:25%">EUR</th>
-                <th style="width:25%"></th>
-            </tr>
-            <tr v-for="(user, key) in users" :key="key">
-                <td>{{ user.firstname + ' ' + user.name }}</td>
-                <td>{{ user.totalGram }}</td>
-                <td>{{ user.totalEuro }}</td>
-                <td><button style="padding:5px;border:1px solid #ccc;">Paid</button></td>
-            </tr>
-        </table>
+		<table v-if="parent === 'admin'">
+			<tr>
+				<th style="width:25%">Name</th>
+				<th style="width:25%">Gram</th>
+				<th style="width:25%">EUR</th>
+				<th style="width:25%"></th>
+			</tr>
+			<tr v-for="(user, key) in users" :key="key">
+				<td>{{ user.firstname + ' ' + user.name }}</td>
+				<td>{{ user.totalGram }}</td>
+				<td>{{ user.totalEuro }}</td>
+				<td><button style="padding:5px;border:1px solid #ccc;">Paid</button></td>
+			</tr>
+		</table>
 
-        <table v-if="parent === 'prestige'">
-            <tr>
-                <th>Name</th>
-                <th>Prestige</th>
-            </tr>
-            <tr v-for="(user, key) in users" :key="key">
-                <td>{{ user.firstname + ' ' + user.name }}</td>
-                <td>{{ user.prestige }}</td>
-            </tr>
-        </table>
-    </section>
+		<table v-if="parent === 'prestige'">
+			<tr>
+				<th>Name</th>
+				<th>Prestige</th>
+			</tr>
+			<tr v-for="(user, key) in users" :key="key">
+				<td>{{ user.firstname + ' ' + user.name }}</td>
+				<td>{{ user.prestige }}</td>
+			</tr>
+		</table>
+	</section>
 </template>
 
 <script>

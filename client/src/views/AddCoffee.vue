@@ -33,6 +33,8 @@ export default {
 	methods: {
 		sendForm() {
 			console.log('submit')
+
+			this.$store.dispatch('coffee/createNewCoffee')
 		}
 	}
 }

@@ -1,9 +1,9 @@
 <template id="prestige">
-    <section>
-        <h1>Get all the beans</h1>
-        <UserList parent="prestige"></UserList>
-        <MainNavigation></MainNavigation>
-    </section>
+	<section>
+		<h1>Get all the beans</h1>
+		<UserList parent="prestige"></UserList>
+		<MainNavigation></MainNavigation>
+	</section>
 </template>
 
 <script>

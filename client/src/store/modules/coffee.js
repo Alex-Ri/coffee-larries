@@ -24,11 +24,11 @@ const actions = {
 	queryAllCoffee: (/* context*/) => {
 
 	},
-	// eslint-disable-next-line no-unused-vars
 	createNewCoffee(context, payload) {
-		// eslint-disable-next-line no-unused-vars
 		const prepareCoffeeDataRequest = {
 		}
+
+		console.log('fired')
 
 		CoffeeService.getCoffee()
 	}

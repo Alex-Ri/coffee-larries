@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>{{ product.brand }} {{ product.name }}</h1>
-    <p>{{ product.price }}</p>
-    <p>{{ product.description }}</p>
-  </div>
+	<div>
+		<h1>{{ product.brand }} {{ product.name }}</h1>
+		<p>{{ product.price }}</p>
+		<p>{{ product.description }}</p>
+	</div>
 </template>
 
 <script>
@@ -30,7 +30,7 @@ export default {
 			// ::TODO::
 			// return dummy data for now
 			return {
-				name: 'dummy-'+id,
+				name: 'dummy-' + id,
 				id: id,
 				brand: 'dummy brand',
 				description: 'lorem ipsum dolor sit amet',
