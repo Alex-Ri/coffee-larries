@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ProductList from '../views/ProductList.vue'
-import Product from '../views/Product.vue'
+import ProductListView from '../views/ProductListView.vue'
+import ProductView from '../views/ProductView.vue'
 import BuildCoffee from '../views/BuildCoffee.vue'
 import Lobby from '../views/Lobby.vue'
 import Prestige from '../views/Prestige.vue'
 import UserAccount from '../views/UserAccount.vue'
 import Admin from '../views/Admin.vue'
-import UserList from '../views/UserList.vue'
 import Confirmation from '../views/Confirmation.vue'
 import AddMe from '../views/AddMe.vue'
 import AddCoffee from '../views/AddCoffee.vue'
@@ -22,19 +21,19 @@ const routes = [
 	},
 	{
 		path: '/product/:id',
-		name: 'Product',
-		component: Product,
+		name: 'ProductView',
+		component: ProductView,
 		meta: {
 			isChildPage: true
 		}
 	},
 	{
 		path: '/productlist',
-		name: 'ProductList',
-		component: ProductList
+		name: 'ProductListView',
+		component: ProductListView
 	},
 	{
-		path: '/buildcoffee',
+		path: '/buildcoffee/:id?',
 		name: 'BuildCoffee',
 		component: BuildCoffee
 	},
@@ -47,11 +46,6 @@ const routes = [
 		path: '/account',
 		name: 'UserAccount',
 		component: UserAccount
-	},
-	{
-		path: '/userlist',
-		name: 'UserList',
-		component: UserList
 	},
 	{
 		path: '/confirmation',
